@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Vector Database Visualization</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #222; color: #fff; }
+        canvas { display: block; }
+        .label {
+            color: #FFF;
+            font-family: sans-serif;
+            padding: 2px 5px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 3px;
+            font-size: 14px;
+            pointer-events: none; /* Important so labels don't interfere with mouse controls */
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        Drag to orbit, Scroll to zoom, Right-click-drag to pan.
+        <br>X: Scope of Authority | Y: Source of Power | Z: Sentiment
+    </div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
